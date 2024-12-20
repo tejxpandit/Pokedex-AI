@@ -9,3 +9,6 @@ dearpygui
 # https://tesseract-ocr.github.io/tessdoc/Installation.html
 # (Windows Version => https://github.com/UB-Mannheim/tesseract/wiki)
 # After installation add Tesseract-OCR Directory to PATH Env Variable
+
+# Preprocessing Libraries
+pyyaml
