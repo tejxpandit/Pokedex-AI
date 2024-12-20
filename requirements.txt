@@ -1,0 +1,6 @@
+dxcam
+pygetwindow
+pytesseract
+rapidfuzz
+dearpygui
+
