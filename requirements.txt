@@ -4,3 +4,8 @@ pytesseract
 rapidfuzz
 dearpygui
 
+# TESSERACT INSTALLATION
+# Download and install Tesseract-OCR from here
+# https://tesseract-ocr.github.io/tessdoc/Installation.html
+# (Windows Version => https://github.com/UB-Mannheim/tesseract/wiki)
+# After installation add Tesseract-OCR Directory to PATH Env Variable
