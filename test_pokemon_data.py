@@ -16,3 +16,8 @@ database_name = "pokemon.db"
 file_path = os.path.join(dst_database_folder, database_name)
 with open(file_path, 'rb') as file:
     pokemon = pickle.load(file)
+
+# for key, value in pokemon.items() :
+#     print(key)
+
+print(pokemon["pokemon-forms"]["bulbasaur"]["type1"])
