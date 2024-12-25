@@ -37,3 +37,9 @@ file_path = os.path.join(dst_database_folder, database_name)
 with open(file_path, 'wb') as file:
     pickle.dump(pokemon, file)
 
+# Load Pickle Dict Object (Database)
+file_path = os.path.join(dst_database_folder, database_name)
+with open(file_path, 'rb') as file:
+    pokemonDB = pickle.load(file)
+
+# print(pokemonDB)
