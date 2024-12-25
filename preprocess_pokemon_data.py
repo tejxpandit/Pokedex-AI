@@ -20,3 +20,14 @@ def extractYAML(file_path):
 src_yaml_folder = "./data/pokemon/yaml"
 dst_database_folder = "./data/pokemon"
 database_name = "pokemon.db"
+
+# Convert YAML Files into Unified Python Dict
+pokemon = {}
+for filename in os.listdir(src_yaml_folder):
+    if filename.endswith(".yaml") or filename.endswith(".yml"):
+        data_type = filename.split(".")[0]
+        # print(data_type)
+        file_path = os.path.join(src_yaml_folder, filename)
+        data = extractYAML(file_path)
+        if data:
+            pokemon[data_type] = data
