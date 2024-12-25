@@ -31,3 +31,9 @@ for filename in os.listdir(src_yaml_folder):
         data = extractYAML(file_path)
         if data:
             pokemon[data_type] = data
+
+# Save as Pickle Dict Object (Database)
+file_path = os.path.join(dst_database_folder, database_name)
+with open(file_path, 'wb') as file:
+    pickle.dump(pokemon, file)
+
