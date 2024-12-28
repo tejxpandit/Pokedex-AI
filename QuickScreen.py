@@ -16,3 +16,5 @@ class QuickScreen:
     def setVideoRenderer(self, id):
         self.renderer = id
 
+    def setMonitor(self, id):
+        self.monitor = id
