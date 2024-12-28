@@ -12,3 +12,7 @@ class QuickScreen:
         self.monitor = 0
         self.bbox = (0,0,100,100) # left, top, right, bottom
         self.win = None
+
+    def setVideoRenderer(self, id):
+        self.renderer = id
+
