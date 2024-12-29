@@ -18,3 +18,14 @@ class QuickScreen:
 
     def setMonitor(self, id):
         self.monitor = id
+
+    def findWindow(self, keywords):
+        keyword_list = keywords.split()
+        win_titles = pgw.getAllTitles()
+        for title in win_titles:
+            if all(keyword in title for keyword in keyword_list):
+                # print(title)
+                win = pgw.getWindowsWithTitle(title)[0]
+                return win
+        print("No Window Found with Keywords : \"" + keywords + "\"")
+        return None
