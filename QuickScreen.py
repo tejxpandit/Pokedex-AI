@@ -37,3 +37,6 @@ class QuickScreen:
 
     def initCapture(self):
         self.cam = dxcam.create(device_idx=self.renderer, output_idx=self.monitor, region=self.bbox)
+
+    def getFrame(self):
+        return self.cam.grab()
