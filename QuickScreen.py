@@ -29,3 +29,8 @@ class QuickScreen:
                 return win
         print("No Window Found with Keywords : \"" + keywords + "\"")
         return None
+        
+    def setWindow(self, keywords):
+        self.win = self.findWindow(keywords)
+        if self.win:
+            self.bbox = (self.win.left, self.win.top, self.win.left+self.win.width, self.win.top+self.win.height)
