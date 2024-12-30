@@ -34,3 +34,6 @@ class QuickScreen:
         self.win = self.findWindow(keywords)
         if self.win:
             self.bbox = (self.win.left, self.win.top, self.win.left+self.win.width, self.win.top+self.win.height)
+
+    def initCapture(self):
+        self.cam = dxcam.create(device_idx=self.renderer, output_idx=self.monitor, region=self.bbox)
