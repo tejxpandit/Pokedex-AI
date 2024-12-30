@@ -40,3 +40,11 @@ class QuickScreen:
 
     def getFrame(self):
         return self.cam.grab()
+    
+    def closeCapture(self):
+        try:
+            self.cam.release()
+        except:
+            pass
+        # del self.cam
+
