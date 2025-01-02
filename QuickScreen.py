@@ -48,3 +48,14 @@ class QuickScreen:
             pass
         # del self.cam
 
+# TEST EXAMPLE
+if __name__ == '__main__':
+    QS = QuickScreen()
+    # SG.findWindow("Pokemon New Emerald")
+    QS.setWindow("Pokemon New Emerald")
+    QS.initCapture()
+    frame = QS.getFrame()
+    x, y, width, height = 50, 150, 350, 100
+
+    from PIL import Image
+    Image.fromarray(frame[y:y+height, x:x+width]).show()
