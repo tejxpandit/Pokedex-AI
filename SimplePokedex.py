@@ -13,3 +13,5 @@ import multiprocessing as mp
 
 import dearpygui.dearpygui as dpg
 import pytesseract as tess
+
+from QuickScreen import QuickScreen
