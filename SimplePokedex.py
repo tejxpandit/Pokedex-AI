@@ -29,3 +29,8 @@ class SimplePokedex:
         self.qs = None
         self.polling_interval = 3
 
+        self.weaknesses = []
+        
+        self.dst_database_folder = "./data/pokemon"
+        self.database_name = "pokemon.db"
+        self.loadPokedexDatabase()
