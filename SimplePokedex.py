@@ -34,3 +34,9 @@ class SimplePokedex:
         self.dst_database_folder = "./data/pokemon"
         self.database_name = "pokemon.db"
         self.loadPokedexDatabase()
+
+    def loadPokedexDatabase(self):
+        # Load Pickle Dict Object (Database)
+        file_path = os.path.join(self.dst_database_folder, self.database_name)
+        with open(file_path, 'rb') as file:
+            self.db = pickle.load(file)
