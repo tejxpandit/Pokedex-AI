@@ -40,3 +40,11 @@ class SimplePokedex:
         file_path = os.path.join(self.dst_database_folder, self.database_name)
         with open(file_path, 'rb') as file:
             self.db = pickle.load(file)
+
+    def pokedexApp(self):
+        dpg.add_window(label="Pokedex", tag="pokedex_window")
+        dpg.add_text("", label="Pokemon Name : ", tag="pokemon_name", parent="pokedex_window", show_label=True)
+        dpg.add_text("", label="Type A : ", tag="pokemon_type1", parent="pokedex_window", show_label=True)
+        dpg.add_text("", label="Type B : ", tag="pokemon_type2", parent="pokedex_window", show_label=True)
+        dpg.add_text("Weaknesses :", parent="pokedex_window")
+        dpg.add_listbox(self.weaknesses, parent="pokedex_window", tag="pokemon_weaknesses")
