@@ -48,3 +48,8 @@ class SimplePokedex:
         dpg.add_text("", label="Type B : ", tag="pokemon_type2", parent="pokedex_window", show_label=True)
         dpg.add_text("Weaknesses :", parent="pokedex_window")
         dpg.add_listbox(self.weaknesses, parent="pokedex_window", tag="pokemon_weaknesses")
+    
+    def startPokedexProcess(self):
+        self.dex_stream = mp.Process(target=pokemonNameExtract, args=(self.stream_state, self.buffer, self.polling_interval, ))
+        self.dex_stream.start()
+
