@@ -53,3 +53,6 @@ class SimplePokedex:
         self.dex_stream = mp.Process(target=pokemonNameExtract, args=(self.stream_state, self.buffer, self.polling_interval, ))
         self.dex_stream.start()
 
+    def startPokedexThread(self):
+        self.dex_thread = threading.Thread(target=self.pokedexThread, args=(self.pkdex_state,))
+        self.dex_thread.start()
