@@ -56,3 +56,15 @@ class SimplePokedex:
     def startPokedexThread(self):
         self.dex_thread = threading.Thread(target=self.pokedexThread, args=(self.pkdex_state,))
         self.dex_thread.start()
+
+    def pokedexThread(self, pkdex_state):
+        while pkdex_state.is_set():
+            text = self.getData()
+            if text is not None:
+                try:
+                    name = self.pokemonFilterName(text)
+                except:
+                    name = ""
+                dpg.set_value("pokemon_name", str(name))
+                print(name)
+            time.sleep(1)
