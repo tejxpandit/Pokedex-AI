@@ -68,3 +68,6 @@ class SimplePokedex:
                 dpg.set_value("pokemon_name", str(name))
                 print(name)
             time.sleep(1)
+    
+    def onlyAlphabets(self, text):
+        return re.sub(r'[^a-zA-Z\s]', '', text)
