@@ -71,3 +71,10 @@ class SimplePokedex:
     
     def onlyAlphabets(self, text):
         return re.sub(r'[^a-zA-Z\s]', '', text)
+
+    def pokemonFilterName(self, text):
+        text = str(text)
+        text = self.onlyAlphabets(text)
+        words = text.split()
+        name = words[0]
+        return name
