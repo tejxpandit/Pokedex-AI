@@ -85,3 +85,11 @@ class SimplePokedex:
         for t in types:
             # TODO : Find "weak-to" in dict and add elements of list to "self.weaknesses"
             pass
+
+    def getTypes(self, name):
+        if name in self.db["pokemon-forms"]:
+            typeA = self.db["pokemon-forms"][name]["type1"]
+            typeB = self.db["pokemon-forms"][name]["type2"]
+            return [typeA, typeB]
+        else:
+            return []
