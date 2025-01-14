@@ -78,3 +78,10 @@ class SimplePokedex:
         words = text.split()
         name = words[0]
         return name
+
+    def getWeaknesses(self, name):
+        name = name.lower()
+        types = self.getTypes(name)
+        for t in types:
+            # TODO : Find "weak-to" in dict and add elements of list to "self.weaknesses"
+            pass
