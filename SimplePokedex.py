@@ -101,3 +101,9 @@ class SimplePokedex:
         except:
             data = None
         return data
+
+    def endPokedex(self):
+        self.pkdex_state.clear()
+        self.dex_thread.join()
+        self.stream_state.clear()
+        self.dex_stream.join()
