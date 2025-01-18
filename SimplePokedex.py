@@ -107,3 +107,7 @@ class SimplePokedex:
         self.dex_thread.join()
         self.stream_state.clear()
         self.dex_stream.join()
+# # TEST EXAMPLE
+# if __name__ == '__main__':
+#     SP = SimplePokedex()
+
