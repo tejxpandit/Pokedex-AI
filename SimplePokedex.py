@@ -93,3 +93,11 @@ class SimplePokedex:
             return [typeA, typeB]
         else:
             return []
+
+    def getData(self):
+        try:
+            data = self.buffer.get()
+            # data = self.buffer.get_nowait()
+        except:
+            data = None
+        return data
