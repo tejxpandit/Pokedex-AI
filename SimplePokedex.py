@@ -111,3 +111,12 @@ class SimplePokedex:
 # if __name__ == '__main__':
 #     SP = SimplePokedex()
 
+#     # SP.pokemonNameExtractInit()
+#     # print(SP.pokemonNameExtract())
+#     # SP.qs.closeCapture()
+
+#     SP.startPokedexProcess()
+#     SP.startPokedexThread()
+#     time.sleep(6)
+#     SP.endPokedex()
+
