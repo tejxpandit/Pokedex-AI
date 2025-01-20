@@ -114,6 +114,24 @@ def pokemonNameExtract(enabled, buffer, interval):
         qs.initCapture()
         tess.pytesseract.tesseract_cmd = "C:/Program Files/Tesseract-OCR/tesseract.exe"
 
+        while enabled.is_set():
+            frame = qs.getFrame()
+            if frame is not None:
+                text = tess.image_to_string(frame[y:y+height, x:x+width])
+                try:
+                    buffer.put_nowait(text)
+                except queue.Full:
+                    try:
+                        buffer.get_nowait()
+                        buffer.put_nowait(text)
+                    except queue.Empty:
+                        pass
+            else:
+                return None
+            time.sleep(interval)
+
+        qs.closeCapture()
+    
 # # TEST EXAMPLE
 # if __name__ == '__main__':
 #     SP = SimplePokedex()
