@@ -107,6 +107,13 @@ class SimplePokedex:
         self.dex_thread.join()
         self.stream_state.clear()
         self.dex_stream.join()
+
+def pokemonNameExtract(enabled, buffer, interval):
+        qs = QuickScreen()
+        qs.setWindow("Pokemon New Emerald")
+        qs.initCapture()
+        tess.pytesseract.tesseract_cmd = "C:/Program Files/Tesseract-OCR/tesseract.exe"
+
 # # TEST EXAMPLE
 # if __name__ == '__main__':
 #     SP = SimplePokedex()
