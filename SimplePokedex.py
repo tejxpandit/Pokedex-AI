@@ -114,6 +114,9 @@ def pokemonNameExtract(enabled, buffer, interval):
         qs.initCapture()
         tess.pytesseract.tesseract_cmd = "C:/Program Files/Tesseract-OCR/tesseract.exe"
 
+        # Opponent Pokemon Name Crop
+        x, y, width, height = 50, 150, 350, 100
+
         while enabled.is_set():
             frame = qs.getFrame()
             if frame is not None:
