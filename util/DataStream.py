@@ -20,3 +20,9 @@ class DataStream:
     def idle(self):
         time.sleep(1)
 
+    def setInitFunction(self, func):
+        self.initfunc = func
+
+    def setDataFunction(self, func):
+        self.datafunc = func
+    
