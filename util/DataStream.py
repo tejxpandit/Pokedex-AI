@@ -17,3 +17,6 @@ class DataStream:
         self.time_interval = 1
         self.logging = False
 
+    def idle(self):
+        time.sleep(1)
+
