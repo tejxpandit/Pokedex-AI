@@ -26,3 +26,6 @@ class DataStream:
     def setDataFunction(self, func):
         self.datafunc = func
     
+    def setBufferFunction(self, func):
+        self.func = func
+
