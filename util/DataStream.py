@@ -34,3 +34,9 @@ class DataStream:
 
     def setTimeInterval(self, time_interval):
         self.time_interval = time_interval
+
+    def enableLogging(self):
+        self.logging = True
+
+    def disableLogging(self):
+        self.logging = False
