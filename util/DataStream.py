@@ -32,3 +32,5 @@ class DataStream:
     def setBuffersize(self, buffer_size):
         self.buffer = mp.Queue(maxsize=buffer_size)
 
+    def setTimeInterval(self, time_interval):
+        self.time_interval = time_interval
