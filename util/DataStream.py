@@ -29,3 +29,6 @@ class DataStream:
     def setBufferFunction(self, func):
         self.func = func
 
+    def setBuffersize(self, buffer_size):
+        self.buffer = mp.Queue(maxsize=buffer_size)
+
