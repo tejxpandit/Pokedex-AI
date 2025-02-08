@@ -40,3 +40,9 @@ class DataStream:
 
     def disableLogging(self):
         self.logging = False
+
+    def begin(self):
+        self.enabled.set()
+        self.process = mp.Process(target=self.func, args=(self.enabled, self.buffer, self.initfunc, self.datafunc, self.time_interval, self.logging, ))
+        self.process.start()
+
