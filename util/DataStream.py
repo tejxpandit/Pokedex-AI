@@ -48,3 +48,7 @@ class DataStream:
 
     def pause(self):
         self.enabled.clear()
+
+    def unpause(self):
+        self.enabled.set()
+    
