@@ -46,3 +46,5 @@ class DataStream:
         self.process = mp.Process(target=self.func, args=(self.enabled, self.buffer, self.initfunc, self.datafunc, self.time_interval, self.logging, ))
         self.process.start()
 
+    def pause(self):
+        self.enabled.clear()
