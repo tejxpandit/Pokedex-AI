@@ -52,3 +52,8 @@ class DataStream:
     def unpause(self):
         self.enabled.set()
     
+    def end(self):
+        self.enabled.clear()
+        self.process.terminate()
+        self.process.join()
+
