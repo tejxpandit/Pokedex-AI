@@ -57,3 +57,10 @@ class DataStream:
         self.process.terminate()
         self.process.join()
 
+    def getData(self):
+        try:
+            data = self.buffer.get_nowait()
+        except:
+            data = None
+        return data
+
