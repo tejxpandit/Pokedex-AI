@@ -71,3 +71,7 @@ class DataStream:
                 data = datafunc()
                 try:
                     buffer.put_nowait(data)
+                except queue.Full:
+                    try:
+                        buffer.get_nowait()
+                        buffer.put_nowait(data)
