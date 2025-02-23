@@ -64,3 +64,8 @@ class DataStream:
             data = None
         return data
 
+    def data_loop(self, enabled, buffer, initfunc, datafunc, time_interval, logging):
+        initfunc()
+        while True:
+            if enabled.is_set():
+                data = datafunc()
