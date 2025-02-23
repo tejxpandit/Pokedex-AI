@@ -69,3 +69,5 @@ class DataStream:
         while True:
             if enabled.is_set():
                 data = datafunc()
+                try:
+                    buffer.put_nowait(data)
